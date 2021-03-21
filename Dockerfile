@@ -1,4 +1,6 @@
 FROM jenkins/jenkins:2.271-jdk11
+FROM jenkins/jenkins:lts
+RUN apt-get update && apt-get install -y maven
 
 USER root
 RUN curl -sSL https://get.docker.com/ | sh
