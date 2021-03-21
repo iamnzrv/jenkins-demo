@@ -12,9 +12,9 @@ pipelineJob('theme-park-job') {
             scm {
                 git {
                     remote {
-                        url 'https://github.com/tkgregory/spring-boot-api-example.git'
+                        url 'https://github.com/iamnzrv/molva-employee.git'
                     }
-                    branch 'master'
+                    branch 'main'
                 }
             }
         }
