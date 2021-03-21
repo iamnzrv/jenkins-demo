@@ -1,3 +1,5 @@
+FROM ubuntu:14.04.4
+RUN apt-get update && apt-get install -y apt-transport-https
 FROM jenkins/jenkins:2.271-jdk11
 FROM jenkins/jenkins:lts
 RUN apt-get update && apt-get install -y maven
