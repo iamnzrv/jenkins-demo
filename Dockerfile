@@ -1,8 +1,6 @@
-FROM ubuntu:14.04.4
-RUN apt-get update && apt-get install -y apt-transport-https
 FROM jenkins/jenkins:2.271-jdk11
-FROM jenkins/jenkins:lts
-RUN apt-get update && apt-get install -y maven
+FROM ubuntu:20.10
+RUN apt-get update && apt-get install -y apt-transport-https && apt-get install -y maven
 
 USER root
 RUN curl -sSL https://get.docker.com/ | sh
