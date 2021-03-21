@@ -2,7 +2,8 @@ FROM jenkins/jenkins:lts-jdk11
 # if we want to install via apt
 USER root
 RUN apt-get update && apt-get install -y maven
-RUN mvn --version && java --version && javac --version
+RUN curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+
 # drop back to the regular jenkins user - good practice
 USER jenkins
 
